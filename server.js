@@ -4,11 +4,12 @@ app.use(bodyParser());
 app.use('/', express.static('./client'));
 var username = process.env.USERNAME;
 var password = process.env.PASSWORD;
+var instance = process.env.INSTANCE;
 app.set('port', (process.env.PORT || 5000))
 
 var returnRequest = function() {
 	return new Promise(function(resolve, reject){
-	var hostname = "https://scrippsdev.service-now.com/sys_update_set.do?JSONv2&sysparm_action=getRecords&sysparm_query=name!=Default^ORDERBYDESCsys_updated_on&displayvalue=true";
+	var hostname = "https://" + instance + ".service-now.com/sys_update_set.do?JSONv2&sysparm_action=getRecords&sysparm_query=name!=Default^ORDERBYDESCsys_updated_on&displayvalue=true";
 	request.get(hostname, function(error, response, body){
 		if (error) {
 			reject(error);
@@ -29,7 +30,7 @@ var createMigration = function(inputData) {
 		if (inputData[0].password != password){
 			reject("Invalid Password");
 		}
-		var hostname = "https://scrippsdev.service-now.com/kb_knowledge.do?JSON&sysparm_action=insert";		
+		var hostname = "https://" + instance + "scrippsdev.service-now.com/kb_knowledge.do?JSON&sysparm_action=insert";		
 		var text = '', shortDesc = 'Migration Plan - ' + inputData[0].changeNumber + ' - ServiceNow Release ' + inputData[0].releaseNumber;
 		var tableStart = "<table border='1px solid #000;'><tr><td>Number</td><td>Name</td><td>Description</td><td>State</td><td>Opened By</td><td>Closed By</td><td>Closed On</td><td>Rally</td></tr>";
 		var tableBody = '';
