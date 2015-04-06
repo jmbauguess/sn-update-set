@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="UpdateSetApp">
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<title>Updates!</title>
+</head>
+<body ng-controller="UpdateSetController">
+	<div class="container-fluid">
+		<form name="updateForm">
+			<select ng-model="updateSets" multiple="true" ng-change="updateList(updateSets)" ng-options="opt as opt.name for opt in options">
+			</select>
+		</form>
+		<div>
+			<results-holder></results-holder>			
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
