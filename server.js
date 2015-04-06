@@ -4,6 +4,7 @@ app.use(bodyParser());
 app.use('/', express.static('./client'));
 var username = process.env.USERNAME;
 var password = process.env.PASSWORD;
+app.set('port', (process.env.PORT || 5000))
 
 var returnRequest = function() {
 	return new Promise(function(resolve, reject){
@@ -76,4 +77,4 @@ app.get('/updatesets/names', function(req, res){
 		});
 });
 
-app.listen(8080);
+app.listen(app.get('port'));
