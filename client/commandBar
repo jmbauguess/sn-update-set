@@ -1,0 +1,8 @@
+<div>
+	<span>Dev Instance:</span><input ng-model="devInstance" type="text" ng-change="updateDevInstance()"/><br/>
+	<span>Prod Instance:</span><input ng-model="prodInstance" type="text" ng-change="updateProdInstance()"/><br/>
+	<span>Change Number:</span><input ng-model="change" type="text" ng-change="updateChangeNumber()"/><br/>
+	<span>Release Number:</span><input ng-model="release" type="text" ng-change="updateReleaseNumber()"/><br/>
+	<span>Password (for Validation Purposes):</span><input ng-model="password" type="password" ng-change="updatePassword()"/><br/>
+	<button ng-click="createMigration()">Create Migration Plan in Knowledge Base</button>
+</div>

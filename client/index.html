@@ -5,13 +5,12 @@
 	<title>Updates!</title>
 </head>
 <body ng-controller="UpdateSetController">
-	<div class="container-fluid">
-		<form name="updateForm">
-			<select ng-model="updateSets" multiple="true" ng-change="updateList(updateSets)" ng-options="opt as opt.name for opt in options">
-			</select>
-		</form>
+	<div class="container">
+		<select ng-model="updateSets" multiple="true" ng-change="updateList(updateSets)" ng-options="opt as opt.name for opt in options">
+		</select>
 		<div>
-			<results-holder></results-holder>			
+			<results-holder></results-holder>
+			<command-bar></command-bar>			
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>

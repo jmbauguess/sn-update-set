@@ -4,7 +4,8 @@ app.use(bodyParser());
 app.use('/', express.static('./client'));
 var username = process.env.USERNAME;
 var password = process.env.PASSWORD;
-var instance = process.env.INSTANCE;
+var instance = process.env.DEV;
+var prod = process.env.PROD;
 app.set('port', (process.env.PORT || 5000))
 
 var returnRequest = function() {
@@ -26,10 +27,9 @@ var returnRequest = function() {
 }
 
 var createMigration = function(inputData) {
-	return new Promise(function(resolve, reject){
-		if (inputData[0].password != password){
-			reject("Invalid Password");
-		}
+	username = inputData[0].username;
+	password = inputData[0].password;
+	return new Promise(function(resolve, reject) {		
 		var hostname = "https://" + instance + "scrippsdev.service-now.com/kb_knowledge.do?JSON&sysparm_action=insert";		
 		var text = '', shortDesc = 'Migration Plan - ' + inputData[0].changeNumber + ' - ServiceNow Release ' + inputData[0].releaseNumber;
 		var tableStart = "<table border='1px solid #000;'><tr><td>Number</td><td>Name</td><td>Description</td><td>State</td><td>Opened By</td><td>Closed By</td><td>Closed On</td><td>Rally</td></tr>";
@@ -47,7 +47,7 @@ var createMigration = function(inputData) {
 					"<td><a href='" + inputData[input].rally + "'>Link</a></tr>";
 			text += inputData[input].migration_plan + "<br/>"
 		}	
-		var heading = "<h1><a target='_blank' href='https://scripps.service-now.com/change_request.do?sysparm_query=number=" + inputData[0].changeNumber + "'>" + shortDesc + '</a></h1>';
+		var heading = "<h1><a target='_blank' href='https://" + prod + ".service-now.com/change_request.do?sysparm_query=number=" + inputData[0].changeNumber + "'>" + shortDesc + '</a></h1>';
 		var finalText =  heading + tableStart + tableBody + tableEnd + text;
 		var knowledgeArticle = {text : finalText, short_description : shortDesc};
 		var options = {

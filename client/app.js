@@ -37,21 +37,20 @@ app.controller('UpdateSetController', ['$scope', '$http', function($scope, $http
 		}
 		$scope.resultsHolder = results;
 	}
-	$scope.createMigration = function(){		
+	$scope.createMigration = function() {
+		$scope.resultHolder.username = $scope.username;
+		$scope.resultHolder.password = $scope.password;
 		$http.post('/updatesets/migration', $scope.resultsHolder)
 			.then(function(data){
 				console.log(data);
 			});
 	}
-	$scope.updatePassword = function(){
-		var results = $scope.resultsHolder;
-		for (var result in results){
-			results[result].password = $scope.password;
-		}
-		$scope.resultsHolder = results;	
-	}
 }]).directive('resultsHolder', function(){
 	return {
 		templateUrl: 'resultsHolder.html'
+	}
+}).directive('commandBar', function(){
+	return {
+		templateUrl: 'commandBar.html'
 	}
 });
