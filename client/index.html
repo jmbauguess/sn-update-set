@@ -6,8 +6,11 @@
 </head>
 <body ng-controller="UpdateSetController">
 	<div class="container">
-		<select ng-model="updateSets" multiple="true" ng-change="updateList(updateSets)" ng-options="opt as opt.name for opt in options">
-		</select>
+		<div class="page-header">
+			<h2>Select One or More Updates Below</h2>
+			<select class="form-control" ng-model="updateSets" multiple="true" ng-change="updateList(updateSets)" ng-options="opt as opt.name for opt in options">
+			</select>
+		</div>
 		<div>
 			<results-holder></results-holder>
 			<command-bar></command-bar>			
