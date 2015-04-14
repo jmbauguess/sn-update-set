@@ -2,30 +2,30 @@
 	<form class="form-horizontal">
 		<div class="form-group">
 			<label>Dev Instance</label>
-			<input ng-model="devInstance" type="text" ng-change="updateDevInstance()"/><br/>
+			<input ng-model="devInstance" type="text" ng-change="updateDevInstance()" class="form-control"/><br/>
 		</div>
 		<div class="form-group">
 			<label>Prod Instance</label>
-			<input ng-model="prodInstance" type="text" ng-change="updateProdInstance()"/><br/>
+			<input ng-model="prodInstance" type="text" ng-change="updateProdInstance()" class="form-control"/><br/>
 		</div>
 		<div class="form-group">
 			<label>Change Number</label>
-			<input ng-model="change" type="text" ng-change="updateChangeNumber()"/><br/>
+			<input ng-model="change" type="text" ng-change="updateChangeNumber()" class="form-control"/><br/>
 		</div>
 		<div class="form-group">
 			<label>Release Number</label>
-			<input ng-model="release" type="text" ng-change="updateReleaseNumber()"/><br/>
+			<input ng-model="release" type="text" ng-change="updateReleaseNumber()" class="form-control"/><br/>
 		</div>
 		<div class="form-group">
 			<label>Username</label>
-			<input ng-model="username" type="text"/><br/>
+			<input ng-model="username" type="text" class="form-control"/><br/>
 		</div>
 		<div class="form-group">
 			<label>Password</label>
-			<input ng-model="password" type="password"/><br/>
+			<input ng-model="password" type="password" class="form-control"/><br/>
 		</div>
 		<div class="form-group">
-			<button ng-click="createMigration()">Create Migration Plan in Knowledge Base</button>
+			<button ng-click="createMigration()" class="btn btn-primary">Create Migration Plan in Knowledge Base</button>
 		</div>
 	</form>
 </div>
