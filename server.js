@@ -35,7 +35,7 @@ var createMigration = function(inputData) {
 	username = inputData[0].username;
 	password = inputData[0].password;
 	return new Promise(function(resolve, reject) {		
-		var hostname = "https://" + instance + "scrippsdev.service-now.com/kb_knowledge.do?JSON&sysparm_action=insert";		
+		var hostname = "https://" + instance + ".service-now.com/kb_knowledge.do?JSON&sysparm_action=insert";		
 		var text = '', shortDesc = 'Migration Plan - ' + inputData[0].changeNumber + ' - ServiceNow Release ' + inputData[0].releaseNumber;
 		var tableStart = "<table border='1px solid #000;'><tr><td>Number</td><td>Name</td><td>Description</td><td>State</td><td>Opened By</td><td>Closed By</td><td>Closed On</td><td>Rally</td></tr>";
 		var tableBody = '';
