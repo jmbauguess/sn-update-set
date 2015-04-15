@@ -38,8 +38,8 @@ app.controller('UpdateSetController', ['$scope', '$http', function($scope, $http
 		$scope.resultsHolder = results;
 	}
 	$scope.createMigration = function() {
-		$scope.resultHolder.username = $scope.username;
-		$scope.resultHolder.password = $scope.password;
+		$scope.resultsHolder.username = $scope.username;
+		$scope.resultsHolder.password = $scope.password;
 		$http.post('/updatesets/migration', $scope.resultsHolder)
 			.then(function(data){
 				console.log(data);
