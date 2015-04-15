@@ -67,6 +67,7 @@ app.controller('UpdateSetController', ['$scope', '$http', function($scope, $http
 					});
 			}
 			$scope.options = dataArr;
+		});
 	}
 }]).directive('resultsHolder', function(){
 	return {
