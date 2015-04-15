@@ -1,16 +1,19 @@
-var express = require('express'), bodyParser = require('body-parser'), http = require('http'), request = require('request'), Promise = require('promise');
+var express = require('express'), 
+bodyParser = require('body-parser'), 
+http = require('http'), 
+request = require('request'), 
+Promise = require('promise');
+require('dotenv').load();
 app = express();
 app.use(bodyParser());
 app.use('/', express.static('./client'));
-var username = process.env.USERNAME;
+var username = process.env.USER;
 var password = process.env.PASSWORD;
 var instance = process.env.DEV;
 var prod = process.env.PROD;
 app.set('port', (process.env.PORT || 5000))
 
-var returnRequest = function() {
-	username = inputData[0].username;
-	password = inputData[0].password;
+var returnRequest = function() {	
 	return new Promise(function(resolve, reject){
 	var hostname = "https://" + instance + ".service-now.com/sys_update_set.do?JSONv2&sysparm_action=getRecords&sysparm_query=name!=Default^ORDERBYDESCsys_updated_on&displayvalue=true";
 	request.get(hostname, function(error, response, body){
@@ -25,7 +28,7 @@ var returnRequest = function() {
 			console.log("Error parsing JSON");
 		}
 	}).auth(username, password, false);
-});
+	});
 }
 
 var createMigration = function(inputData) {
