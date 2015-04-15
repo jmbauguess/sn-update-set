@@ -9,6 +9,8 @@ var prod = process.env.PROD;
 app.set('port', (process.env.PORT || 5000))
 
 var returnRequest = function() {
+	username = inputData[0].username;
+	password = inputData[0].password;
 	return new Promise(function(resolve, reject){
 	var hostname = "https://" + instance + ".service-now.com/sys_update_set.do?JSONv2&sysparm_action=getRecords&sysparm_query=name!=Default^ORDERBYDESCsys_updated_on&displayvalue=true";
 	request.get(hostname, function(error, response, body){
