@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2015-04-15 14:37:29">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Changing some things about the update set table so we can have pretty migration plans.</description>
+<inserted/>
+<name>Update Set Updates</name>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>1b49cdc1019b39001148f272bc337a78</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>162107</sys_created_by>
+<sys_created_on>2015-04-15 14:37:28</sys_created_on>
+<sys_id>d0f8e6ffc51371001148bc310094439f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>162107</sys_updated_by>
+<sys_updated_on>2015-04-15 14:37:28</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_5bfc4999b053b1001bbdc8bc22e1982e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action"><sys_ui_action action="INSERT_OR_UPDATE"><action_name>reopen</action_name><active>true</active><client>false</client><comments/><condition>current.state == 'complete'</condition><form_action>true</form_action><form_button>true</form_button><form_context_menu>true</form_context_menu><form_link>false</form_link><hint>Reopens and makes update set the current update set</hint><list_action>true</list_action><list_banner_button>false</list_banner_button><list_button>false</list_button><list_choice>false</list_choice><list_context_menu>true</list_context_menu><list_link>false</list_link><list_save_with_form_button>false</list_save_with_form_button><name>Reopen</name><onclick>reopen();</onclick><order>100</order><script><![CDATA[current.state = 'in progress';
+current.update();
+action.setRedirectURL(current);]]]]><![CDATA[></script><show_insert>true</show_insert><show_multiple_update>false</show_multiple_update><show_query>false</show_query><show_update>true</show_update><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-07 13:35:11</sys_created_on><sys_domain>global</sys_domain><sys_id>5bfc4999b053b1001bbdc8bc22e1982e</sys_id><sys_mod_count>5</sys_mod_count><sys_overrides/><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-07 13:45:10</sys_updated_on><table>sys_update_set</table></sys_ui_action><sys_app_file action="INSERT_OR_UPDATE"><customer_update>true</customer_update><publish_override/><replace_on_upgrade>false</replace_on_upgrade><restore/><sys_app/><sys_code>!!?ZL/</sys_code><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-07 13:35:11</sys_created_on><sys_id>b9fd4d19b053b1001bbdc8bc22e198c9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Reopen</sys_name><sys_parent display_value="Update Set">1c44f29ac94011001fd0f37cc549adaf</sys_parent><sys_path>!!(`E/!!?ZL/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>5bfc4999b053b1001bbdc8bc22e1982e</sys_source_id><sys_source_table>sys_ui_action</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_ui_action_5bfc4999b053b1001bbdc8bc22e1982e</sys_update_name><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-07 13:45:10</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="Update Set Updates">d0f8e6ffc51371001148bc310094439f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>162107</sys_created_by>
+<sys_created_on>2015-04-15 14:37:28</sys_created_on>
+<sys_id>14f8e6ffc51371001148bc310094439f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>162107</sys_updated_by>
+<sys_updated_on>2015-04-15 14:37:28</sys_updated_on>
+<table>sys_update_set</table>
+<target_name>Reopen</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_735095d9b053b1001bbdc8bc22e19817</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action"><sys_ui_action action="INSERT_OR_UPDATE"><action_name>close_update_set</action_name><active>true</active><client>false</client><comments/><condition>current.state == 'in progress'</condition><form_action>true</form_action><form_button>true</form_button><form_context_menu>true</form_context_menu><form_link>false</form_link><hint/><list_action>true</list_action><list_banner_button>false</list_banner_button><list_button>true</list_button><list_choice>false</list_choice><list_context_menu>true</list_context_menu><list_link>false</list_link><list_save_with_form_button>false</list_save_with_form_button><name>Close Update Set</name><onclick/><order>100</order><script><![CDATA[current.state = 'complete';
+current.update();
+action.setRedirectURL(current);]]]]><![CDATA[></script><show_insert>true</show_insert><show_multiple_update>false</show_multiple_update><show_query>false</show_query><show_update>true</show_update><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-07 13:47:23</sys_created_on><sys_domain>global</sys_domain><sys_id>735095d9b053b1001bbdc8bc22e19817</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-07 13:47:23</sys_updated_on><table>sys_update_set</table></sys_ui_action><sys_app_file action="INSERT_OR_UPDATE"><customer_update>true</customer_update><publish_override/><replace_on_upgrade>false</replace_on_upgrade><restore/><sys_app/><sys_code>!!?ZM/</sys_code><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-07 13:47:23</sys_created_on><sys_id>28c015d9b053b1001bbdc8bc22e1987c</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Close Update Set</sys_name><sys_parent display_value="Update Set">1c44f29ac94011001fd0f37cc549adaf</sys_parent><sys_path>!!(`E/!!?ZM/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>735095d9b053b1001bbdc8bc22e19817</sys_source_id><sys_source_table>sys_ui_action</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_ui_action_735095d9b053b1001bbdc8bc22e19817</sys_update_name><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-07 13:47:23</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="Update Set Updates">d0f8e6ffc51371001148bc310094439f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>162107</sys_created_by>
+<sys_created_on>2015-04-15 14:37:29</sys_created_on>
+<sys_id>18f8e6ffc51371001148bc310094439f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>162107</sys_updated_by>
+<sys_updated_on>2015-04-15 14:37:29</sys_updated_on>
+<table>sys_update_set</table>
+<target_name>Close Update Set</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="System Update Sets (with remote update set support)">4e4cac0e811311001fd0f3203c5a7ce3</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_5004c388c0a8016c0092cd1419fabca3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section section_id="5004c388c0a8016c0092cd1419fabca3" sys_domain="global" table="sys_update_set" version="2"><sys_ui_element action="INSERT_OR_UPDATE"><element>name</element><position>0</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>7499cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>state</element><position>1</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>b499cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sys_created_by</element><position>2</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>f499cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>merged_to</element><position>3</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>3899cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>4</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>7899cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sys_created_on</element><position>5</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>b899cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>release_date</element><position>6</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>f899cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>install_date</element><position>7</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>3c99cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>installed_from</element><position>8</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>7c99cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>update_set.xml</element><position>9</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>bc99cd81019b39001148f272bc337a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter display_value="My Current Set">52b90d44c0a8016c00b546a84aebd800</sys_ui_formatter><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type>formatter</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_rally</element><position>10</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>c999cd81019b39001148f272bc337a4d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>11</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>0d99cd81019b39001148f272bc337a4d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>description</element><position>12</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>4d99cd81019b39001148f272bc337a4d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_migration_plan</element><position>13</position><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>8d99cdc1019b39001148f272bc337ac8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section display_value="">5004c388c0a8016c0092cd1419fabca3</sys_ui_section><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>sys_update_set</name><roles/><sys_created_by>glide.maint</sys_created_by><sys_created_on>2007-01-23 17:33:13</sys_created_on><sys_domain>global</sys_domain><sys_id>5004c388c0a8016c0092cd1419fabca3</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>glide.maint</sys_updated_by><sys_updated_on>2007-01-23 17:33:13</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section><sys_app_file action="INSERT_OR_UPDATE"><customer_update>true</customer_update><publish_override/><replace_on_upgrade>false</replace_on_upgrade><restore/><sys_app display_value="System Update Sets (with remote update set support)">4e4cac0e811311001fd0f3203c5a7ce3</sys_app><sys_code>!!$X|/</sys_code><sys_created_by>glide.maint</sys_created_by><sys_created_on>2007-01-23 17:33:13</sys_created_on><sys_id>a182fa56c94011001fd0f37cc549adaa</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sys_update_set</sys_name><sys_parent display_value="Update Set">1c44f29ac94011001fd0f37cc549adaf</sys_parent><sys_path>!!(`E/!!$X|/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>5004c388c0a8016c0092cd1419fabca3</sys_source_id><sys_source_table>sys_ui_section</sys_source_table><sys_type/><sys_update_name>sys_ui_section_5004c388c0a8016c0092cd1419fabca3</sys_update_name><sys_updated_by>154235</sys_updated_by><sys_updated_on>2014-10-15 14:34:38</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="Update Set Updates">d0f8e6ffc51371001148bc310094439f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>162107</sys_created_by>
+<sys_created_on>2015-04-15 14:37:28</sys_created_on>
+<sys_id>54f8e6ffc51371001148bc310094439f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>162107</sys_updated_by>
+<sys_updated_on>2015-04-15 14:37:28</sys_updated_on>
+<table>sys_update_set</table>
+<target_name>Update Set</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_sys_update_set_u_migration_plan</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary element="u_migration_plan" table="sys_update_set"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice/><choice_field/><choice_table/><column_label>Migration Plan</column_label><comments/><create_roles/><default_value>&lt;h2&gt;Data Changes&lt;/h2&gt;&#13;
+&lt;p&gt;Enter any data changes here.&lt;/p&gt;&#13;
+&lt;h2&gt;Smoke Tests&lt;/h2&gt;&#13;
+&lt;p&gt;Enter any smoke tests here.&lt;/p&gt;&#13;
+&lt;h2&gt;Automated Tests&lt;/h2&gt;&#13;
+&lt;p&gt;Enter which (if any) automated tests apply to this update set.&lt;/p&gt;&#13;
+&lt;h2&gt;Other Information&lt;/h2&gt;&#13;
+&lt;p&gt;Anything else goes here.&lt;/p&gt;</default_value><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_migration_plan</element><element_reference>false</element_reference><foreign_database/><internal_type display_value="HTML">html</internal_type><mandatory>false</mandatory><max_length>65536</max_length><name>sys_update_set</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>0199cd81019b39001148f272bc337a4e</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-15 14:37:02</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><u_model_id/><u_normalize_set/><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary><sys_app_file action="INSERT_OR_UPDATE"><customer_update>true</customer_update><publish_override/><replace_on_upgrade>false</replace_on_upgrade><restore/><sys_app/><sys_code>!!?ZG/</sys_code><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>c999cd81019b39001148f272bc337a4e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Migration Plan</sys_name><sys_parent display_value="Update Set">1c44f29ac94011001fd0f37cc549adaf</sys_parent><sys_path>!!(`E/!!?ZG/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id element="u_migration_plan" name="sys_update_set" sys_source_table="sys_dictionary">0199cd81019b39001148f272bc337a4e</sys_source_id><sys_source_table>sys_dictionary</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_dictionary_sys_update_set_u_migration_plan</sys_update_name><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-15 14:37:02</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="Update Set Updates">d0f8e6ffc51371001148bc310094439f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>162107</sys_created_by>
+<sys_created_on>2015-04-15 14:37:29</sys_created_on>
+<sys_id>94f8e6ffc51371001148bc310094439f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>162107</sys_updated_by>
+<sys_updated_on>2015-04-15 14:37:29</sys_updated_on>
+<table>sys_update_set</table>
+<target_name>Update Set.Migration Plan</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_sys_update_set_u_rally</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT" element="u_rally" table="sys_update_set"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>Rally</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_rally</element><element_reference>false</element_reference><foreign_database/><internal_type display_value="URL">url</internal_type><mandatory>false</mandatory><max_length>1024</max_length><name>sys_update_set</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>7099cd81019b39001148f272bc337a4b</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><u_model_id/><u_normalize_set/><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary><sys_app_file action="INSERT_OR_UPDATE"><customer_update>true</customer_update><publish_override/><replace_on_upgrade>false</replace_on_upgrade><restore/><sys_app/><sys_code>!!?ZE/</sys_code><sys_created_by>162107</sys_created_by><sys_created_on>2015-04-06 18:37:32</sys_created_on><sys_id>7c99cd81019b39001148f272bc337a4b</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Rally</sys_name><sys_parent display_value="Update Set">1c44f29ac94011001fd0f37cc549adaf</sys_parent><sys_path>!!(`E/!!?ZE/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id element="u_rally" name="sys_update_set" sys_source_table="sys_dictionary">7099cd81019b39001148f272bc337a4b</sys_source_id><sys_source_table>sys_dictionary</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_dictionary_sys_update_set_u_rally</sys_update_name><sys_updated_by>162107</sys_updated_by><sys_updated_on>2015-04-06 18:37:32</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="Update Set Updates">d0f8e6ffc51371001148bc310094439f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>162107</sys_created_by>
+<sys_created_on>2015-04-15 14:37:29</sys_created_on>
+<sys_id>d4f8e6ffc51371001148bc310094439f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>162107</sys_updated_by>
+<sys_updated_on>2015-04-15 14:37:29</sys_updated_on>
+<table>sys_update_set</table>
+<target_name>Update Set.Rally</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
